@@ -3,7 +3,8 @@
 class employee:                      ## Class employee 
     cls_list=[]
 
-    def Set_Update(self):                 ##Update Method to sort the table as the user want by ID or Salary and Ascent or Descent
+    @classmethod
+    def Set_Update(cls):                 ##Update Method to sort the table as the user want by ID or Salary and Ascent or Descent
         n = len(employee.cls_list)
         print("\nIn this step, you should choose the data that will be saved in the CSV file, arranged by ID or salary.\n")
 
@@ -299,7 +300,7 @@ def SYSTEM(again):
 
     first_row=employee.cls_list.pop(0)
     if again == '1' or  again == '2' or again == '4': 
-        employee.Set_Update(employee.cls_list)
+        employee.Set_Update()
     employee.cls_list.insert(0,first_row)
 
 ####################################################################################  WRITE_IN_Funcrtion #########################################################################
